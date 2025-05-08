@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopFlex - E-Commerce Store</title>
+    <meta name="description" content="Shop the latest trends with ShopFlex" />
+    <meta name="author" content="ShopFlex" />
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="ShopFlex - E-Commerce Store" />
+    <meta property="og:description" content="Shop the latest trends with ShopFlex" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@shopflex" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Include the CSS file -->
+    <link href="./src/styles.css" rel="stylesheet" />
+    
+    <!-- Include Tailwind (in a real project, this would be bundled) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Header Section -->
+      <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="/" class="text-2xl font-bold">ShopFlex</a>
+          
+          <nav class="hidden md:flex space-x-6">
+            <a href="/" class="hover:text-primary">Home</a>
+            <a href="/products" class="hover:text-primary">Products</a>
+            <a href="/about" class="hover:text-primary">About</a>
+          </nav>
+          
+          <div class="flex items-center space-x-4">
+            <a href="/cart" class="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart">
+                <circle cx="8" cy="21" r="1"/>
+                <circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+              </svg>
+              <span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+            </a>
+            
+            <button class="md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12"/>
+                <line x1="4" x2="20" y1="6" y2="6"/>
+                <line x1="4" x2="20" y1="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Hero Section -->
+        <section class="relative bg-black text-white">
+          <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7')] bg-cover bg-center opacity-50"></div>
+          <div class="container mx-auto px-4 py-32 relative z-10 flex flex-col items-center text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+              Discover Amazing Products
+            </h1>
+            <p class="text-xl mb-8 max-w-2xl animate-fade-in opacity-90">
+              Shop the latest trends and find exactly what you need with our extensive collection of high-quality products
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a href="/products" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 animate-fade-in">Shop Now</a>
+              <a href="/about" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8 text-white border-white hover:bg-white hover:text-black animate-fade-in">Learn More</a>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Featured Products Section -->
+        <section class="container mx-auto py-16 px-4">
+          <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="overflow-hidden hover:shadow-lg transition-shadow rounded-md border bg-card product-card">
+              <div class="aspect-square relative overflow-hidden bg-muted product-image-container">
+                <img 
+                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&q=80" 
+                  alt="Wireless Headphones" 
+                  class="object-cover w-full h-full transition-transform hover:scale-105 product-image"
+                />
+              </div>
+              <div class="p-4 font-medium">
+                <h3 class="line-clamp-1 text-lg">Wireless Headphones</h3>
+                <p class="text-sm text-muted-foreground">Electronics</p>
+              </div>
+              <div class="px-4 pb-2">
+                <p class="font-bold text-lg">$99.99</p>
+              </div>
+              <div class="p-4 pt-0 flex justify-between">
+                <a href="/product/1" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Details</a>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 add-to-cart-btn custom-button" data-product-id="1" data-product-title="Wireless Headphones" data-product-price="99.99" data-product-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
+                  <svg class="mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"/>
+                    <circle cx="19" cy="21" r="1"/>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                  </svg>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="overflow-hidden hover:shadow-lg transition-shadow rounded-md border bg-card product-card">
+              <div class="aspect-square relative overflow-hidden bg-muted product-image-container">
+                <img 
+                  src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=300&fit=crop&q=80" 
+                  alt="Premium T-Shirt" 
+                  class="object-cover w-full h-full transition-transform hover:scale-105 product-image"
+                />
+              </div>
+              <div class="p-4 font-medium">
+                <h3 class="line-clamp-1 text-lg">Premium T-Shirt</h3>
+                <p class="text-sm text-muted-foreground">Clothing</p>
+              </div>
+              <div class="px-4 pb-2">
+                <p class="font-bold text-lg">$29.99</p>
+              </div>
+              <div class="p-4 pt-0 flex justify-between">
+                <a href="/product/2" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Details</a>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 add-to-cart-btn custom-button" data-product-id="2" data-product-title="Premium T-Shirt" data-product-price="29.99" data-product-image="https://images.unsplash.com/photo-1576566588028-4147f3842f27">
+                  <svg class="mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1"/>
+                    <circle cx="19" cy="21" r="1"/>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                  </svg>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <a href="/products" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8">View All Products</a>
+          </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="bg-primary text-primary-foreground py-16">
+          <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+              <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+              <p class="mb-6 opacity-90">
+                Stay updated with our latest products, exclusive offers, and promotions.
+              </p>
+              <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  placeholder="Enter your email address"
+                  required
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-white text-foreground"
+                />
+                <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 custom-button">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="bg-muted mt-auto">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo & Description -->
+            <div class="md:col-span-1">
+              <a href="/" class="text-2xl font-bold">ShopFlex</a>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Your one-stop shop for everything you need. Quality products, great prices, fast delivery.
+              </p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+              <h3 class="font-semibold mb-3">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="/" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a></li>
+                <li><a href="/products" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Products</a></li>
+                <li><a href="/about" class="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            
+            <!-- Categories -->
+            <div>
+              <h3 class="font-semibold mb-3">Categories</h3>
+              <ul class="space-y-2">
+                <li><a href="/category/electronics" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Electronics</a></li>
+                <li><a href="/category/clothing" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Clothing</a></li>
+                <li><a href="/category/home-decor" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Home Decor</a></li>
+              </ul>
+            </div>
+            
+            <!-- Newsletter -->
+            <div>
+              <h3 class="font-semibold mb-3">Stay Updated</h3>
+              <p class="text-sm text-muted-foreground mb-3">
+                Subscribe to our newsletter for the latest products and offers.
+              </p>
+              <div class="flex space-x-2">
+                <input 
+                  type="email" 
+                  placeholder="Email address" 
+                  class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-sm h-9"
+                />
+                <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 custom-button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-xs text-muted-foreground">
+              &copy; 2025 ShopFlex. All rights reserved.
+            </p>
+            
+            <div class="flex space-x-4 mt-4 md:mt-0">
+              <a href="#" class="text-xs text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="#" class="text-xs text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Include GPT Engineer script (required for the app) -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    
+    <!-- Include the JavaScript file -->
+    <script src="./src/script.js"></script>
+  </body>
+</html>
